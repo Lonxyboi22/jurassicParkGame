@@ -1,9 +1,7 @@
 import requests
 import json
-response_API = requests.get('https://github.com/shultztom/dinosaur-fact-api/.git')
-#print(response_API.status_code) 
-data = json.loads(response_API.text)
+import random
+response_API = requests.get('https://github.com/rakhadjo/tyrannosaurus.rest.git')
 
-value = data['key']
+print(response_API.text) 
 
-print(value)
