@@ -1,0 +1,12 @@
+Ankylosaurus
+Brachiosaurus
+Diloposaurus
+Parasaurolophus
+Quetzalcoatlus
+Spinosaurus
+Stegosaurus
+Therizinosaurus
+Triceratops
+Tyrannosaurus Rex
+Utahraptor
+Velociraptor
