@@ -5,6 +5,8 @@ import random
 response_API = requests.get('https://dinosaur-facts-api.shultzlab.com/dinosaurs')
 dinosaur = response_API.json()
 
+#couldn't figure out why the API wasn't working, went this route instead...
+# Defining variables
 dino_file = 'dinosaurs.txt'
 name = ""
 rand_item = ["Pistol", "Crowbar", "Shotgun", "Knife", "Machette", "Nothing"]
@@ -12,6 +14,7 @@ weapon = False
 appeared_dino = ""
 game = True
 
+# Dino appearing function is randomized besides some of the dinos being pre programmed to kill you...
 def dinosaur_appears():
     print("You hear something nearby in the bushes...")
     with open(dino_file, 'r+') as dinos:
@@ -21,14 +24,18 @@ def dinosaur_appears():
         for word in rand_dino_list:
           word = word.strip('\n')
           new_list.append(word)
+        # Makes which dinosaur that appears random...
         dino_num = random.randint(0, 11)
         appeared_dino = new_list[dino_num]
         print("Suddenly, a " +appeared_dino+ " becomes visable in the brush.")
+        # These would kill you instantly so thats why it doesn't have input options...
         if appeared_dino == "Tyrannosaurus Rex" or appeared_dino == "Utahraptor" or appeared_dino == "Therizinosaurus":
           print("Before you can react fast enough, the " +appeared_dino+ " attacks and kills you. You are dead.")
           print("Thanks for playing!")
           game = False
           return game
+        # Makes it so the canivours are more difficult and the herbavors skip through to the end of game.
+        # There is a lot of narration to the user about what is happening, its so they get an experience!
         elif appeared_dino == "Velociraptor" or appeared_dino == "Spinosaurus" or appeared_dino == "Quetzalcoatlus":
           print("The " +appeared_dino+ "seems to not have noticed you yet.\n Would you like to fight or flee?")
           print("Options: fight/flee")
@@ -68,6 +75,7 @@ def dinosaur_appears():
             print("All you can do is watch in horror as " +appeared_dino+ " begins to devour your body...")
             print("You died by coincidence.")
             print("Thanks for playing!")
+        # I thought this would be a fun way to make the game interesting!!!
         elif appeared_dino == "Diloposaurus":
           print("A " +appeared_dino+ "has appeared from the bushes.")
           print("The Diloposaurus makes a small cooing noise as it looks at you with what seems like curiosity.")
@@ -106,7 +114,7 @@ def dinosaur_appears():
             print("Congrats! You made it alive!")
             print("Thanks for playing!")
             
-
+# This below is if you enter the building offered in the game! makes it more interactive.
 def building_yes():
   lockerOptions = ""
   print("You find a window near the base of the building that seems like you would fit through.")
@@ -130,7 +138,8 @@ def building_yes():
 
     return weapon
     
-
+# Starts the game after you hit continue:
+# side note, has you pick a path and depending what happens you normally get a dino interaction
 def game_start():
   directions = ["path 1", "path 2", "path 3", "back to the jungle"]
   print("You are currently walking through the jungle. Suddenly you come to a dirt road that forks into three paths. Where would you like to go?")
@@ -184,7 +193,7 @@ def game_start():
       print("Please enter a valid option.")
 
 
-
+# Allows you to choose if you will play the game after it asks your name:
 def intro():
   options = ["continue", "quit"]
   print("Would you like to continue on with the adventure?")
@@ -200,9 +209,7 @@ def intro():
     else:
       print("Please enter a valid option!")
       
-
-
-
+# Main code below that starts the game!
 if __name__ == "__main__":
     while game == True:
       print("Welcome, to Jurassic Park (Game)!")
@@ -212,4 +219,5 @@ if __name__ == "__main__":
       print("However, while visiting the park, the dinosaurs have gotten loose thanks to that loser Nedry.")
       print("You also have been separated from the rest of the group, what will you do " +name+ "?")
       intro()
+      # Ends while loop:
       game = False  
