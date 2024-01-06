@@ -70,7 +70,7 @@ def dinosaur_appears():
             print("The sound of you falling alerted the nearby " +appeared_dino+ ".")
             print("As you scramble to get up, you hear a rush of booming foot steps thundering towards you.")
             print("The " +appeared_dino+ " knocks you down in one step.")
-            print("As you hit the ground by the intense force and weight of the dinosaur, you hear a loud crak of bone at the base of your neck.")
+            print("As you hit the ground by the intense force and weight of the dinosaur, you hear a loud crack of bone at the base of your neck.")
             print("You try to move but nothing is moving. It seems you are paralyzed from the neck down.")
             print("All you can do is watch in horror as " +appeared_dino+ " begins to devour your body...")
             print("You died by coincidence.")
@@ -84,7 +84,7 @@ def dinosaur_appears():
           print("You fall back onto the ground as your left eye goes dark after a couple seconds, the foamy goo burning more intensely")
           print("The Diloposaurus makes a leap and lands on your chest, pinning you to the ground.")
           if weapon == True:
-            print("Maybe seconds before the DIolosaurus makes its finishing move, you suddenly remember you have a weapon tucked in you waistband!")
+            print("Maybe seconds before the Diolosaurus makes its finishing move, you suddenly remember you have a weapon tucked in you waistband!")
             print("In a split second decision, you stretch under the dinosaur pinning you to reach for it.")
             save_throw = random.randint(0, 2)
             if save_throw == 1:
@@ -99,20 +99,20 @@ def dinosaur_appears():
               print("Thanks for playing!")
               game = False
               return game            
-          else: 
-            print("You pull the weapon out just as the Diloporsaurus burries its teeth into your neck.\n In shock, you try to breathe only to have liquid clog up the air you desperately need.")
-            print("Your remaining vision starts to darken just as the Diloposaurus swiftly rips your throat out.")
-            print("You have died...")
-            print("Thanks for playing!")
+            else: 
+              print("You pull the weapon out just as the Diloporsaurus burries its teeth into your neck.\n In shock, you try to breathe only to have liquid clog up the air you desperately need.")
+              print("Your remaining vision starts to darken just as the Diloposaurus swiftly rips your throat out.")
+              print("You have died...")
+              print("Thanks for playing!")
             
         else:
-            print("A " +appeared_dino+ "has come out of the tree line. Lucky for you it's an herbavor!")
-            print("You silently sneak farther down the path away from the " + appeared_dino)
-            print("You continue on your walk for about a mile.\n You filally find the people you came to the island with!\n They are working on meeting a helicopter in the next few minutes.")
-            print("After a couple minutes of waiting the helicopter lands and immediately takes off as soon as everyone is inside.")
-            print("As you fly far away from Isla Nublar, the island lights up in explosions and fire.\n You are finally safe and on your way home...")
-            print("Congrats! You made it alive!")
-            print("Thanks for playing!")
+          print("A " +appeared_dino+ "has come out of the tree line. Lucky for you it's an herbavor!")
+          print("You silently sneak farther down the path away from the " + appeared_dino)
+          print("You continue on your walk for about a mile.\n You filally find the people you came to the island with!\n They are working on meeting a helicopter in the next few minutes.")
+          print("After a couple minutes of waiting the helicopter lands and immediately takes off as soon as everyone is inside.")
+          print("As you fly far away from Isla Nublar, the island lights up in explosions and fire.\n You are finally safe and on your way home...")
+          print("Congrats! You made it alive!")
+          print("Thanks for playing!")
             
 # This below is if you enter the building offered in the game! makes it more interactive.
 def building_yes():
@@ -127,7 +127,7 @@ def building_yes():
     lockerNum = random.randint(1, 5)
     itemNum = random.randint(0, 5)
     print("You open locker number", lockerNum)
-    print("Inside the locker you found "+rand_item[itemNum])
+    print("Inside the locker you found a "+rand_item[itemNum])
     if rand_item == "Nothing":
       weapon = False
     else:
