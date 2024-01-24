@@ -66,7 +66,7 @@ def dinosaur_appears():
             print("Thanks for playing!")
           else:
             print("You book it in the opposite direction it was lingering.")
-            print("Your foot catches on something, causing you to trip and craash into the jungle floor.")
+            print("Your foot catches on something, causing you to trip and crash into the jungle floor.")
             print("The sound of you falling alerted the nearby " +appeared_dino+ ".")
             print("As you scramble to get up, you hear a rush of booming foot steps thundering towards you.")
             print("The " +appeared_dino+ " knocks you down in one step.")
@@ -148,22 +148,22 @@ def game_start():
   while userInput not in directions:
     print("Options: path 1/path 2/path 3/back to the jungle")
     userInput = input()
-    if userInput == "path 1":
+    if userInput == "path 1" or "1":
       print("You take a left down to the first path you see.\n The jungle thickens as you are walking down the path.\n After what feels like forever walking, the jungle seems to engolf you and the sky begins to get dark.\n")
       dinosaur_appears()
-    elif userInput == "path 2":
+    elif userInput == "path 2" or "2":
       print("You take the middle path.\n As you travel down this path, you see a building in the distance.\n")
       print("As you get closer, the building looms overhead.")
       print("Would you like to enter the building?")
       print("Options: yes/no")
       userInput2 = input()
-      if userInput2 == "yes":
+      if userInput2 == "yes" or "y":
         building_yes()
         dinosaur_appears()
       else:
         print("You continue down the path for about another 10 minutes past the building.\n ")
         dinosaur_appears()
-    elif userInput == "path 3":
+    elif userInput == "path 3" or "3":
       userInput3 = ""
       print("You continue down the last path for about 15 minutes.")
       print("As you walk down the road, you come upon a slow moving river at the end of the path.\n You notice the path continue on the other side of the river.\n Do you want to try and cross the river or turn back?")
@@ -183,7 +183,7 @@ def game_start():
         print("Something seems off, you no longer recognize your surroundings...")
         dinosaur_appears()
 
-    elif userInput == "back to the jungle":
+    elif userInput == "back to the jungle" or "back":
       print("As you begin to turn around, a loud booming noise quickly approaching can be heard close by.")
       print("You start to book it down a random path but to no avail, a Tyrannosaurus Rex has appeared from the tree line cutting you off mid sprint.")
       print("The T-Rex swiftly picks you up with its sharp teeth sinking into your abdomin.\n In excrutiating pain, you try to struggle away but begin to feel weak from blood loss.")
